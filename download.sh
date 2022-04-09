@@ -18,7 +18,7 @@ elif [ $FILE == "RaFD" ]; then
     mkdir -p ./data/
     # wget -N $URL -O $ZIP_FILE
     unzip $ZIP_FILE -d ./data/
-    rm $ZIP_FILE
+    #rm $ZIP_FILE
     
 elif [ $FILE == 'pretrained-celeba-128x128' ]; then
 
