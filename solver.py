@@ -192,6 +192,7 @@ class Solver(object):
         x_fixed, c_org = next(data_iter)
         x_fixed = x_fixed.to(self.device)
         c_fixed_list = self.create_labels(c_org, self.c_dim, self.dataset, self.selected_attrs)
+        c_org=torch.tensor(np.ones(len(c_org),np.int32))
 
         # Learning rate cache for decaying.
         g_lr = self.g_lr
