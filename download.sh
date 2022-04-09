@@ -10,7 +10,16 @@ if [ $FILE == "celeba" ]; then
     unzip $ZIP_FILE -d ./data/
     rm $ZIP_FILE
 
+elif [ $FILE == "RaFD" ]; then
 
+    # CelebA images and attribute labels
+    # URL=https://www.dropbox.com/s/d1kjpkqklf0uw77/celeba.zip?dl=0
+    ZIP_FILE=/content/drive/MyDrive/StarGan_Depth_pramit.zip
+    mkdir -p ./data/
+    # wget -N $URL -O $ZIP_FILE
+    unzip $ZIP_FILE -d ./data/
+    rm $ZIP_FILE
+    
 elif [ $FILE == 'pretrained-celeba-128x128' ]; then
 
     # StarGAN trained on CelebA (Black_Hair, Blond_Hair, Brown_Hair, Male, Young), 128x128 resolution
